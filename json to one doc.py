@@ -115,8 +115,11 @@ def creating_doc(a):
     document.add_heading('The TABLE',0)
     for filename in a:
         f= open(filename,)
+        # returns JSON object as a dictionary
         data= json.load(f)
         creating_table(data, document)
+        #closing file
+        f.close()
         document.add_paragraph(' ')
     """output file name"""
     document.save('merge11.docx')
