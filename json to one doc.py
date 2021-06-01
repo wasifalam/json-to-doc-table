@@ -108,7 +108,9 @@ def creating_table(data,document):
             else:
                 A=table.cell(i,j)
             j+=1
-
+    table.style= 'TableGrid'
+    
+    
 def creating_doc(a):
     """creating doc"""
     document=Document()
